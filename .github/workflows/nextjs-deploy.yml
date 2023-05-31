@@ -40,7 +40,7 @@ jobs:
       - name: add nojekyll
         run: sudo touch src/out/.nojekyll
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: built-files
           path: src/out
