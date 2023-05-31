@@ -8,6 +8,7 @@ services:
       - .:/app
     environment:
      - WATCHPACK_POLLING=true
+     - PATH=${PATH}:/app/node_modules/.bin
     ports:
-      - "1313:3000"
+     - "3000:3000"
     command: sh -c "cd src && npm run dev"
