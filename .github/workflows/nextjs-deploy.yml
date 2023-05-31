@@ -28,8 +28,10 @@ jobs:
 
       - name: add nojekyll
         run: sudo touch src/out/.nojekyll
-      - uses: actions/upload-artifact@v2
+      - name: Upload artifact
+      - uses: actions/upload-artifact@v3
         with:
+          name: my-artifact
           name: built-files
           path: src/out
 
