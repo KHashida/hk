@@ -6,6 +6,6 @@ module.exports = {
     images: {
     unoptimized: true,
   },
-  basePath: isProduction ? '/repository-name' : '',
+  basePath: isProduction ? '/nextjs-docker' : '',
   output: 'export'
 }
