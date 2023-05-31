@@ -27,7 +27,7 @@ jobs:
         run: docker compose run --rm app sh -c "cd src && npm run build"
 
       - name: add nojekyll
-        run: touch src/out/.nojekyll
+        run: sudo touch src/out/.nojekyll
       - uses: actions/upload-artifact@v2
         with:
           name: built-files
