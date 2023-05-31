@@ -40,7 +40,7 @@ jobs:
       - name: add nojekyll
         run: sudo touch src/out/.nojekyll
       - name: Upload artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-pages-artifact@v1
         with:
           name: built-files
           path: src/out
@@ -54,7 +54,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           artifact_name: built-files
